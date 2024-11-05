@@ -33,3 +33,9 @@ interface NamedVector {     // 이건 extends로도 변경 가능
 const v: NamedVector = { x: 3, y: 4, name: 'Zee' }
 calculateLength(v)  // 이게 가능하다
 ```
+
+즉, 구조적 서브 타이핑이란 상속 관계가 명시되어 있지 않더라도 객체의 프로퍼티를 기반으로 사용처에서 사용함에 문제가 없다면 타입 호환을 허용하는 방식이다.
+구조적 서브 타이핑은 타입 시스템이 객체의 프로퍼티를 체크하는 과정을 수행해주기 때문에, 명목적 서브 타이핑 (타입 정의 시 상속 관계를 명확히 명시하는 경우에만 타입 호환을 허용하는 것)과 동일한 효과를 내면서도 개발자가 상속 관계를 명시해주어야 하는 수고를 덜어주게 된다.
+
+> https://toss.tech/article/typescript-type-compatibility
+> 위 아티클을 참고하였으며, Freshness와 관련된 부분은 참고하여 읽어보면 좋을 것 같다.
